@@ -5,5 +5,10 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import url(./2-form.css);
+@import url(./1-gallery.css);
+/* @import url('./vite-promo.css'); */
+/* @import url('./header.css'); */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
