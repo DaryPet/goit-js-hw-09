@@ -2,10 +2,6 @@ import SimpleLightbox from 'simplelightbox';
 
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   let gallery = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
@@ -106,13 +102,4 @@ container.addEventListener('click', event => {
     return;
   }
   console.log('click');
-  //   const largeImage = target.dataset.source;
-
-  //   basicLightbox
-  //     .create(
-  //       `<div class="modal">
-  //                     <img src="${largeImage}"
-  //                </div>`
-  //     )
-  //     .show();
 });

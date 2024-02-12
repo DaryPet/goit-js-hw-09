@@ -3,8 +3,8 @@ const STORAGE_KEY = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
 
 function readFormData(form) {
-  const messageData = form.message.value;
-  const emailData = form.email.value;
+  const messageData = form.message.value.trim();
+  const emailData = form.email.value.trim();
   return {
     messageData,
     emailData,
@@ -28,10 +28,10 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   if (form.email.value !== '' && form.message.value !== '') {
     localStorage.clear();
-    //   form.email.value = '';
-    //   form.message.value = '';
-    form.reset();
+    form.email.value = '';
+    form.message.value = '';
   } else {
     alert(' Please fill all fileds');
   }
 });
+console.log(rawData);
