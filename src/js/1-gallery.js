@@ -2,13 +2,6 @@ import SimpleLightbox from 'simplelightbox';
 
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-document.addEventListener('DOMContentLoaded', function () {
-  let gallery = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-    captionsData: 'alt',
-  });
-});
-
 const images = [
   {
     preview:
@@ -78,6 +71,13 @@ const images = [
 const container = document.querySelector('ul.gallery');
 container.innerHTML = createGallery(images);
 
+document.addEventListener('DOMContentLoaded', function () {
+  let gallery = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt',
+  });
+});
+
 function createGallery(images) {
   return images
     .map(
@@ -101,5 +101,4 @@ container.addEventListener('click', event => {
   if (target.nodeName !== 'IMG') {
     return;
   }
-  console.log('click');
 });
