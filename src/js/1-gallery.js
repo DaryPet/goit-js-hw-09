@@ -71,13 +71,6 @@ const images = [
 const container = document.querySelector('ul.gallery');
 container.innerHTML = createGallery(images);
 
-document.addEventListener('DOMContentLoaded', function () {
-  let gallery = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-    captionsData: 'alt',
-  });
-});
-
 function createGallery(images) {
   return images
     .map(
@@ -95,10 +88,17 @@ function createGallery(images) {
     .join('');
 }
 
-container.addEventListener('click', event => {
-  event.preventDefault();
-  const { target } = event;
-  if (target.nodeName !== 'IMG') {
-    return;
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  let gallery = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt',
+  });
 });
+
+// container.addEventListener('click', event => {
+//   event.preventDefault();
+//   const { target } = event;
+//   if (target.nodeName !== 'IMG') {
+//     return;
+//   }
+// });
